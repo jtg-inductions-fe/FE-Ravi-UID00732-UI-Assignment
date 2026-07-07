@@ -1,16 +1,25 @@
+@use '../abstracts/index' as *;
+
 h1 {
-    font-size: 3rem;
+    font-size: convert-rem(36);
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: convert-rem(32);
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: convert-rem(18);
+    line-height: 100%;
+    letter-spacing: 0%;
 }
 
 p {
-    font-size: 1rem;
-    line-height: 1.6;
+    font-size: convert-rem(16);
+    line-height: 100%;
+    letter-spacing: 0%;
 }
