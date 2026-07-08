@@ -1,42 +1,45 @@
+@use './abstracts/variables' as *;
+
 @font-face {
     font-family: 'Poppins';
-    src: url('../../public/assets/fonts/Poppins-Light.woff2') format('woff2');
-    font-weight: 300;
+    src: url('#{$font-path}/Poppins-Light.woff2') format('woff2');
+    font-weight: $font-weight-light;
     font-style: light;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../../public/assets/fonts/Poppins-Regular.woff2') format('woff2');
-    font-weight: 400;
+    src: url('#{$font-path}/Poppins-Regular.woff2') format('woff2');
+    font-weight: $font-weight-regular;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../../public/assets/fonts/Poppins-Medium.woff2') format('woff2');
-    font-weight: 500;
+    src: url('#{$font-path}/Poppins-Medium.woff2') format('woff2');
+    font-weight: $font-weight-medium;
     font-style: medium;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url('../../public/assets/fonts/Poppins-Bold.woff2') format('woff2');
-    font-weight: 700;
+    src: url('#{$font-path}/Poppins-Bold.woff2') format('woff2');
+    font-weight: $font-weight-bold;
     font-style: bold;
 }
 
 @font-face {
     font-family: 'Josefin Sans';
-    src: url('../../public/assets/fonts/JosefinSans-Regular.woff2')
+    src: url('../../public/assets/fonts/josefin_sans_fonts/JosefinSans-Regular.woff2')
         format('woff2');
-    font-weight: 400;
+    font-weight: $font-weight-regular;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Josefin Sans';
-    src: url('../../public/assets/fonts/JosefinSans-Bold.woff2') format('woff2');
-    font-weight: 700;
+    src: url('../../public/assets/fonts/josefin_sans_fonts/JosefinSans-Bold.woff2')
+        format('woff2');
+    font-weight: $font-weight-bold;
     font-style: bold;
 }
