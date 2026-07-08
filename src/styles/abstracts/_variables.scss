@@ -12,7 +12,7 @@ $text-dark: #474646;
 $text-muted: #858585;
 $border-color: #f0f0f0;
 
-$breakpoint-mobile: 428px;
+$breakpoint-mobile: 656px;
 $breakpoint-tablet: 1024px;
 $breakpoint-desktop: 1728px;
 
@@ -24,12 +24,12 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-$space-xs: convert-rem(4);
-$space-sm: convert-rem(8);
-$space-md: convert-rem(16);
-$space-lg: convert-rem(24);
-$space-xl: convert-rem(32);
-$space-2xl: convert-rem(48);
+$space-xs: px-to-rem(4);
+$space-sm: px-to-rem(8);
+$space-md: px-to-rem(16);
+$space-lg: px-to-rem(24);
+$space-xl: px-to-rem(32);
+$space-2xl: px-to-rem(48);
 
 $icomoon-font-family: 'icomoon' !default;
 $icomoon-font-path: '/assets/fonts';
