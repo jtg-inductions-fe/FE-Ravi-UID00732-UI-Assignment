@@ -21,7 +21,6 @@
 [class*=' icon-'] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: '#{$icomoon-font-family}' !important;
-    speak: never;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -36,7 +35,7 @@
 .icon-logo_heart {
     &:before {
         content: $icon-logo_heart;
-        color: #002f52;
+        color: $secondary-mid-color;
     }
 }
 .icon-logo_main .path1 {
@@ -55,19 +54,19 @@
 .icon-logo_bag {
     &:before {
         content: $icon-logo_bag;
-        color: #002f52;
+        color: $secondary-mid-color;
     }
 }
 .icon-logo_search {
     &:before {
         content: $icon-logo_search;
-        color: #fff;
+        color: $secondary-mid-color;
     }
 }
 .icon-logo_vector {
     &:before {
         content: $icon-logo_vector;
-        color: #002f52;
+        color: $secondary-mid-color;
     }
 }
 .icon-logo_mail {

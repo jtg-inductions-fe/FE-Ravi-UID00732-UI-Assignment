@@ -10,7 +10,7 @@
         <nav class="navbar">
             <!-- left side container having hamburger icon, alurabooks logo and desktop navigation links. -->
             <div class="navbar__leftcontainer">
-                <div class="hamburger__container" id="hamburger">
+                <div class="hamburger__container">
                     <img
                         src="public/assets/images/hamburger.png"
                         alt="hamburger-icon"
@@ -18,7 +18,10 @@
                 </div>
 
                 <div class="logo__container">
-                    <img src="public/assets/images/Logo.png" alt="main-logo" />
+                    <img
+                        src="public/assets/images/Logo.png"
+                        alt="main-brand-logo"
+                    />
                     <div class="alurabooks">
                         <span class="alurabooks__main">Alura</span>
                         <span class="alurabooks__sub">Books</span>
@@ -27,13 +30,10 @@
 
                 <!-- Desktop Navigation Links Hidden on mobile -->
                 <ul class="navbar__desktop-links">
-                    <li
-                        class="navbar__dropdown-trigger"
-                        id="categories-trigger"
-                    >
+                    <li class="dropdown">
                         <a href="#">CATEGORIES</a>
 
-                        <ul class="navbar__dropdown-menu">
+                        <ul class="dropdown__menu">
                             <li><a href="#">PROGRAMMING</a></li>
                             <li><a href="#">FRONT-END</a></li>
                             <li><a href="#">INFRASTRUCTURE</a></li>
@@ -71,7 +71,7 @@
             </div>
 
             <!-- List of option opens when hamburger icon is clicked on mobile view. -->
-            <ul class="navbar__menu" id="nav-menu">
+            <ul class="navbar__menu">
                 <li class="navbar__category">Categories</li>
                 <li><a href="#" class="navbar__link">PROGRAMMING</a></li>
                 <li><a href="#" class="navbar__link">FRONT-END</a></li>
@@ -80,6 +80,28 @@
                 <li><a href="#" class="navbar__link">DESIGN & UX</a></li>
             </ul>
         </nav>
+
+        <!--Hero Section Container -->
+        <div class="hero">
+            <div class="hero__container">
+                <h1 class="hero__title">Do you already know where to start?</h1>
+                <p class="hero__subtitle">
+                    Find what you need for your development on our bookshelf!
+                </p>
+
+                <!-- 🔍 Reusable Search Component Inside Hero Context -->
+                <form class="search">
+                    <span>
+                        <i class="icon-logo_search"></i>
+                    </span>
+                    <input
+                        type="search"
+                        class="search__input"
+                        placeholder="What will your next read be?"
+                    />
+                </form>
+            </div>
+        </div>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
