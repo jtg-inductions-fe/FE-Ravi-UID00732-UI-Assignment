@@ -5,13 +5,12 @@
     justify-content: space-between;
     align-items: center;
     height: 3.5rem;
-    background-color: white;
+    background-color: $white;
     border-bottom: 1px solid $border-color;
     position: relative;
 }
 
 .hamburger__container {
-    background-color: $secondary-color;
     height: 3.5rem;
     width: 3.5rem;
     display: flex;

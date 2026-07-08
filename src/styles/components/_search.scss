@@ -4,11 +4,10 @@
     display: flex;
     align-items: center;
     width: 100%;
-    max-width: 32rem; /* Keeps the search bar from getting too wide on desktop */
+    max-width: 32rem;
     height: 3rem;
-    background-color: white;
     border: 1px solid $border-color;
-    border-radius: 1.5rem; /* Creates the pill-shaped curved borders */
+    border-radius: 1.5rem;
     padding: 0 1.2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 
@@ -20,32 +19,11 @@
         font-size: 0.9rem;
         color: $secondary-mid-color;
         padding-right: 1rem;
+        text-align: center;
 
         &::placeholder {
-            color: rgba($secondary-mid-color, 0.6);
+            color: white;
             font-weight: $font-weight-regular;
-        }
-    }
-
-    &__button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-
-        // Target your search magnifier font icon from IcoMoon
-        .icon-logo_vector,
-        i {
-            font-size: 1.2rem;
-            color: $secondary-mid-color;
-            transition: color 0.2s;
-
-            &:hover {
-                color: $primary-color;
-            }
         }
     }
 }
