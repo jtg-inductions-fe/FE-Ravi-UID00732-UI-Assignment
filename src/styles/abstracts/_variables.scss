@@ -1,0 +1,49 @@
+@use './functions' as *;
+
+$primary-color: #eb9b00;
+$secondary-color: #002f52;
+$secondary-mid-color: #326589;
+
+$white: #ffffff;
+$black: #000000;
+$bg-light: #f9f9f9;
+$text-dark: #474646;
+$text-muted: #858585;
+
+$breakpoint-mobile: 428px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1728px;
+
+$font-family-brand: 'Josefin Sans', sans-serif;
+$font-family-base: 'Poppins', sans-serif;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$space-xs: px-to-rem(4);
+$space-sm: px-to-rem(8);
+$space-md: px-to-rem(16);
+$space-lg: px-to-rem(24);
+$space-xl: px-to-rem(32);
+$space-2xl: px-to-rem(48);
+
+$icomoon-font-family: 'icomoon' !default;
+
+$icon-logo_heart: '\e900';
+$icon-logo_main-path1: '\e902';
+$icon-logo_main-path2: '\e903';
+$icon-logo_bag: '\e904';
+$icon-logo_search: '\e905';
+$icon-logo_vector: '\e906';
+$icon-logo_mail: '\e907';
+$icon-google-plus3: '\ea8d';
+$icon-telegram: '\ea95';
+$icon-renren: '\ea99';
+$icon-flickr4: '\eaa6';
+$icon-github: '\eab0';
+$icon-ello: '\eab6';
+
+$font-path: '/public/assets/fonts';
+$icomoon-font-path: '/public/assets/fonts/icomoon-icons';
