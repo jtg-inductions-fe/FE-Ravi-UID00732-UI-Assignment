@@ -1,0 +1,230 @@
+@use '../abstracts/index' as *;
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.5rem;
+    background-color: white;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+}
+
+.hamburger__container {
+    background-color: $secondary-color;
+    height: 3.5rem;
+    width: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.navbar__leftcontainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar__rightcontainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.alurabooks {
+    display: none;
+}
+
+.navbar__menu {
+    position: fixed;
+    top: 3.5rem;
+    left: -18rem;
+    width: 16rem;
+    background-color: white;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 100;
+}
+
+.navbar__menu.is-open {
+    left: 0;
+}
+
+.navbar__category {
+    color: $primary-color;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.navbar__link {
+    color: $secondary-mid-color;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+
+    &:hover {
+        color: $primary-color;
+    }
+}
+
+.navbar__rightcontainer a {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar__icon-text,
+.navbar__desktop-links {
+    display: none;
+}
+
+.icon-logo_heart {
+    font-size: 3rem;
+    color: $secondary-mid-color;
+}
+
+.icon-logo_bag {
+    font-size: 2rem;
+    color: $secondary-mid-color;
+}
+
+.icon-logo_vector {
+    font-size: 1.8rem;
+    color: $secondary-mid-color;
+}
+
+// Tablet Breakpoint
+@media (min-width: $breakpoint-mobile) {
+    .navbar__rightcontainer {
+        width: 20%;
+    }
+    .navbar__leftcontainer {
+        padding-left: 1rem;
+    }
+
+    .hamburger__container {
+        display: none;
+    }
+
+    .icon-logo_heart {
+        display: none;
+    }
+
+    .alurabooks {
+        font-family: $font-family-brand;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-left: 0.5rem;
+    }
+
+    .alurabooks__main {
+        font-weight: $font-weight-bold;
+    }
+    .alurabooks__sub {
+        font-weight: $font-weight-regular;
+    }
+
+    .logo__container {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .navbar__desktop-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 1rem;
+        margin-left: 2rem;
+
+        a {
+            text-decoration: none;
+            color: $secondary-mid-color;
+            font-weight: $font-weight-regular;
+            font-size: 0.7rem;
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+
+    .navbar__dropdown-trigger {
+        position: relative;
+        &:hover > a {
+            background-color: $secondary-color;
+            color: $white;
+            padding: 1.3rem 1rem;
+        }
+
+        &:hover .navbar__dropdown-menu {
+            display: flex;
+        }
+    }
+
+    .navbar__dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 2.2rem;
+
+        width: 14rem;
+        background-color: $white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        list-style: none;
+        flex-direction: column;
+        z-index: 1000;
+
+        li {
+            border-bottom: 1px solid $border-color;
+
+            &:first-child a {
+                background-color: $secondary-color;
+                color: $white;
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        a {
+            display: block;
+            padding: 1rem;
+            font-size: 0.85rem;
+            color: $secondary-mid-color;
+
+            &:hover {
+                background-color: $white;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+//Laptop Breakpoint
+@media (min-width: $breakpoint-tablet) {
+    .navbar__icon-text {
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: $font-weight-regular;
+        color: $secondary-mid-color;
+    }
+
+    .navbar__leftcontainer {
+        padding-left: 2rem;
+        gap: 2.5rem;
+    }
+
+    .navbar__rightcontainer {
+        width: 40%;
+    }
+}

@@ -7,21 +7,79 @@
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <h1>This is H1</h1>
-        <h2>This is H2</h2>
-        <h3>This is H3</h3>
-        <h4>This is H4</h4>
-        <input type="text" placeholder="This is input" />
-        <button>Click me</button>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum,
-            totam veritatis quidem quasi ab suscipit ea fugiat impedit provident
-            natus reiciendis perferendis animi atque? Maxime minima nihil
-            molestias cupiditate tempora aperiam quasi odio, consectetur libero
-            vitae facilis dicta illum nam quidem totam pariatur porro
-            repudiandae molestiae. Blanditiis, explicabo?
-        </p>
+        <nav class="navbar">
+            <!-- left side container having hamburger icon, alurabooks logo and desktop navigation links. -->
+            <div class="navbar__leftcontainer">
+                <div class="hamburger__container" id="hamburger">
+                    <img
+                        src="public/assets/images/hamburger.png"
+                        alt="hamburger-icon"
+                    />
+                </div>
 
+                <div class="logo__container">
+                    <img src="public/assets/images/Logo.png" alt="main-logo" />
+                    <div class="alurabooks">
+                        <span class="alurabooks__main">Alura</span>
+                        <span class="alurabooks__sub">Books</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links Hidden on mobile -->
+                <ul class="navbar__desktop-links">
+                    <li
+                        class="navbar__dropdown-trigger"
+                        id="categories-trigger"
+                    >
+                        <a href="#">CATEGORIES</a>
+
+                        <ul class="navbar__dropdown-menu">
+                            <li><a href="#">PROGRAMMING</a></li>
+                            <li><a href="#">FRONT-END</a></li>
+                            <li><a href="#">INFRASTRUCTURE</a></li>
+                            <li><a href="#">BUSINESS</a></li>
+                            <li><a href="#">DESIGN & UX</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">FAVORITES</a></li>
+                    <li><a href="#">MY BOOKSHELF</a></li>
+                </ul>
+            </div>
+
+            <!-- navbar right-container containing the heart, bag and vector icon. -->
+            <div class="navbar__rightcontainer">
+                <!-- Heart icon -->
+                <div class="navbar__heart">
+                    <a href="#"><i class="icon-logo_heart"></i></a>
+                </div>
+
+                <!-- bag icon -->
+                <div class="navbar__bag">
+                    <a href="#">
+                        <i class="icon-logo_bag"></i>
+                        <span class="navbar__icon-text">My Bag</span>
+                    </a>
+                </div>
+
+                <!-- vector icon -->
+                <div class="navbar__vector">
+                    <a href="#">
+                        <i class="icon-logo_vector"></i>
+                        <span class="navbar__icon-text">My Profile</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- List of option opens when hamburger icon is clicked on mobile view. -->
+            <ul class="navbar__menu" id="nav-menu">
+                <li class="navbar__category">Categories</li>
+                <li><a href="#" class="navbar__link">PROGRAMMING</a></li>
+                <li><a href="#" class="navbar__link">FRONT-END</a></li>
+                <li><a href="#" class="navbar__link">INFRASTRUCTURE</a></li>
+                <li><a href="#" class="navbar__link">BUSINESS</a></li>
+                <li><a href="#" class="navbar__link">DESIGN & UX</a></li>
+            </ul>
+        </nav>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
