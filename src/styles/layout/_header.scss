@@ -103,6 +103,10 @@
     transition: left 0.3s ease-in-out;
     z-index: 100;
 
+    &:hover .navbar__category {
+        color: $secondary-color;
+    }
+
     @media (min-width: $breakpoint-mobile) {
         display: none;
     }
@@ -115,6 +119,7 @@
 .navbar__category {
     font-weight: $font-weight-bold;
     font-size: px-to-rem(24);
+    color: $primary-color;
 
     &:hover {
         color: $primary-color;
