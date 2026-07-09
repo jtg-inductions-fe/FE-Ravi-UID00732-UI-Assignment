@@ -24,12 +24,12 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-$space-xs: px-to-rem(4);
-$space-sm: px-to-rem(8);
-$space-md: px-to-rem(16);
-$space-lg: px-to-rem(24);
-$space-xl: px-to-rem(32);
-$space-2xl: px-to-rem(48);
+$space-xs: pxToRem(4);
+$space-sm: pxToRem(8);
+$space-md: pxToRem(16);
+$space-lg: pxToRem(24);
+$space-xl: pxToRem(32);
+$space-2xl: pxToRem(48);
 
 $icomoon-font-family: 'icomoon' !default;
 
