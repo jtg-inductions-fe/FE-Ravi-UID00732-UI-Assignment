@@ -1,4 +1,3 @@
-@use '../fonts' as *;
 @use './functions' as *;
 
 $primary-color: #eb9b00;
@@ -33,7 +32,6 @@ $space-xl: px-to-rem(32);
 $space-2xl: px-to-rem(48);
 
 $icomoon-font-family: 'icomoon' !default;
-$icomoon-font-path: '/assets/fonts';
 
 $icon-logo_heart: '\e900';
 $icon-logo_main-path1: '\e902';
@@ -48,3 +46,6 @@ $icon-renren: '\ea99';
 $icon-flickr4: '\eaa6';
 $icon-github: '\eab0';
 $icon-ello: '\eab6';
+
+$font-path: '/public/assets/fonts';
+$icomoon-font-path: '/public/assets/fonts/icomoon-icons';
