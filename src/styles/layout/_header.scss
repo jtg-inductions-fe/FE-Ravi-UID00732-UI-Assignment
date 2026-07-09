@@ -31,6 +31,10 @@
     @media (min-width: $breakpoint-mobile) {
         display: none;
     }
+
+    &.is-active {
+        background-color: $secondary-color;
+    }
 }
 
 .navbar__leftcontainer {
@@ -77,7 +81,7 @@
         height: px-to-rem(30);
         width: px-to-rem(156);
         //font-size: px-to-rem(30);
-        font-size: clamp(1.1rem, 2vw, 1.5rem);
+        font-size: clamp(1.3rem, 2vw, 2.5rem);
         margin-right: 3vw;
 
         &__main {
@@ -103,6 +107,10 @@
     gap: 1.5rem;
     transition: left 0.3s ease-in-out;
     z-index: 100;
+
+    @media (min-width: $breakpoint-mobile) {
+        display: none;
+    }
 }
 
 .navbar__menu.is-open {
