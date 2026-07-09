@@ -6,10 +6,10 @@ const hamburgerIcon = document.getElementById('hamburger-icon');
 const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('is-open');
-    hamburger.classList.toggle('is-active');
+    navMenu.classList.toggle('--open');
+    hamburger.classList.toggle('--active');
 
-    if (hamburger.classList.contains('is-active')) {
+    if (hamburger.classList.contains('--active')) {
         hamburgerIcon.src = HAMBURGER_WHITE_PATH;
     } else {
         hamburgerIcon.src = HAMBURGER_BLUE_PATH;

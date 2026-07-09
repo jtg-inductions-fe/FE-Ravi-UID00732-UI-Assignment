@@ -61,7 +61,7 @@
         }
     }
 
-    &__menu.is-open {
+    &__menu.--open {
         left: 0;
     }
 
@@ -141,7 +141,7 @@
         display: none;
     }
 
-    &.is-active {
+    &.--active {
         background-image: $gradient;
     }
 }
