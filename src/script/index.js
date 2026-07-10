@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 
 const HAMBURGER_WHITE_PATH = 'public/assets/images/hamburger_white.svg';
 const HAMBURGER_BLUE_PATH = 'public/assets/images/hamburger_blue.svg';
@@ -20,7 +20,7 @@ hamburger.addEventListener('click', () => {
 });
 
 new Swiper('#releases-slider', {
-    modules: [Pagination],
+    modules: [Pagination, Navigation],
 
     initialSlide: 1,
     centeredSlides: true,
@@ -30,6 +30,10 @@ new Swiper('#releases-slider', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
 
     breakpoints: {

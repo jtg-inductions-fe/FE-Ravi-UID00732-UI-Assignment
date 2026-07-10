@@ -10,13 +10,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        //max-width: pxToRem(1200);
         margin: 0 auto;
         gap: pxToRem(8);
-
-        @include breakpoint(large) {
-            // flex-direction: row;
-        }
     }
 
     &__title {
@@ -31,48 +26,21 @@
         padding: pxToRem(16) 0;
         margin: 0;
     }
-}
 
-// Swiper Base Setup
-.swiper {
-    width: 100%;
-    position: relative;
-    padding-bottom: pxToRem(10);
-    padding-top: pxToRem(40);
-}
+    @include breakpoint(medium) {
+        padding-bottom: 2rem;
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: pxToRem(40);
+        }
 
-.recommend-card {
-    &__icon-btn .icon-logo_heart {
-        font-size: 3rem;
-        color: $secondary-mid-color;
+        &__title {
+            font-size: pxToRem(26);
+            padding-top: pxToRem(48);
+            margin-bottom: pxToRem(16);
+        }
     }
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    color: white;
-    background-color: $secondary-color;
-    width: pxToRem(40);
-    height: pxToRem(40);
-    border-radius: 50%;
-    top: 45%;
-
-    &::after {
-        font-size: pxToRem(16);
-        font-weight: bold;
-    }
-}
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination.swiper-pagination-horizontal {
-    top: 0;
-    bottom: auto;
-    height: pxToRem(24);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.swiper-pagination-bullet-active {
-    background: $secondary-color;
 }
 
 .recommend-card {
@@ -82,10 +50,13 @@
     padding: pxToRem(24);
     width: 100%;
     max-width: pxToRem(380);
-    //height: pxToRem(280);
     display: flex;
-    // flex-direction: column;
     gap: pxToRem(24);
+
+    &__icon-btn .icon-logo_heart {
+        font-size: 3rem;
+        color: $secondary-mid-color;
+    }
 
     &__tagline {
         color: $primary-color; // Orange
@@ -105,7 +76,6 @@
         color: rgba(0, 0, 0, 0.85);
         font-size: pxToRem(14);
         line-height: 1.5;
-        // margin-bottom: pxToRem(5);
     }
 
     &__actions {
@@ -119,12 +89,10 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        //gap: pxToRem(30);
         width: 100%;
     }
 
     &__graphic-box {
-        //background-color: #2F80ED;
         width: pxToRem(162);
         height: pxToRem(168);
         display: flex;
@@ -154,37 +122,8 @@
             background-color: darken(#f2994a, 10%);
         }
     }
-}
 
-//Breakpoint
-
-@media (min-width: $breakpoint-mobile) {
-    .releases {
-        padding-bottom: 2rem;
-        &__container {
-            flex-direction: column;
-            align-items: center;
-            gap: pxToRem(40);
-        }
-
-        &__title {
-            font-size: pxToRem(26);
-            padding-top: pxToRem(48);
-            margin-bottom: pxToRem(16);
-        }
-    }
-
-    #releases-slider {
-        flex: 1.2;
-        max-width: pxToRem(801);
-        margin: 0;
-    }
-
-    // .carousel__img {
-    //     max-width: pxToRem(160);
-    // }
-
-    .recommend-card {
+    @include breakpoint(medium) {
         flex: 1;
         flex-direction: row;
         justify-content: space-between;
@@ -209,6 +148,16 @@
         }
     }
 }
+
+#release-slider {
+    @include breakpoint(medium) {
+        flex: 1.2;
+        max-width: pxToRem(801);
+        margin: 0;
+    }
+}
+
+//Breakpoint
 
 //adding content-wrapper class
 // .content-wrapper {
