@@ -1,15 +1,4 @@
 @use 'base';
 @use 'abstracts' as *;
 @use 'vendors/icomoon';
-
-.div-example {
-    background-color: blue;
-
-    @include breakpoint(medium) {
-        background-color: red;
-    }
-
-    @include breakpoint(large) {
-        background-color: pink;
-    }
-}
+@use 'layout';
