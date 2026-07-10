@@ -9,7 +9,6 @@
     height: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 1.5rem;
-    padding-left: 1.8rem;
     background: transparent;
 
     &__content-wrapper {
@@ -29,13 +28,12 @@
     }
 
     &__input {
-        width: 65%;
+        field-sizing: content;
         border: none;
         outline: none;
         background: transparent;
         font-size: 0.9rem;
         color: white;
-        text-align: left;
 
         &::placeholder {
             color: white;
