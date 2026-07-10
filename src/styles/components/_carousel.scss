@@ -21,8 +21,6 @@
 
     @include breakpoint(medium) {
         max-width: pxToRem(801);
-        padding-left: pxToRem(48);
-        padding-right: pxToRem(48);
     }
 }
 
@@ -30,15 +28,17 @@
 .swiper-button-next {
     @include breakpoint(medium) {
         color: white;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         background-image: $gradient;
-        width: pxToRem(40);
-        height: pxToRem(40);
+        width: pxToRem(48);
+        height: pxToRem(48);
         border-radius: 50%;
-        top: 55%;
         transition: background-color 0.2s ease;
-        &::after {
-            font-size: pxToRem(5);
-            font-weight: bold;
+        padding-top: pxToRem(14);
+        padding-left: pxToRem(14);
+        svg {
+            width: pxToRem(14);
+            height: pxToRem(14);
         }
 
         &:hover {

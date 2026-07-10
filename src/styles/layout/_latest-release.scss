@@ -14,6 +14,19 @@
         gap: pxToRem(8);
     }
 
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        @include breakpoint(large) {
+            flex-direction: row;
+        }
+    }
+
     &__title {
         color: $primary-color;
         font-size: pxToRem(18);
@@ -36,7 +49,7 @@
         }
 
         &__title {
-            font-size: pxToRem(26);
+            font-size: pxToRem(32);
             padding-top: pxToRem(48);
             margin-bottom: pxToRem(16);
         }
@@ -63,6 +76,10 @@
         font-size: pxToRem(16);
         font-weight: $font-weight-bold;
         margin-bottom: pxToRem(8);
+
+        @include breakpoint(large) {
+            font-size: pxToRem(32);
+        }
     }
 
     &__title {
@@ -74,7 +91,7 @@
 
     &__description {
         color: rgba(0, 0, 0, 0.85);
-        font-size: pxToRem(14);
+        font-size: pxToRem(16);
         line-height: 1.5;
     }
 
@@ -93,15 +110,18 @@
     }
 
     &__graphic-box {
-        width: pxToRem(162);
-        height: pxToRem(168);
+        width: 100%;
+        height: 70%;
         display: flex;
         align-items: center;
         justify-content: center;
 
         img {
-            height: 100%;
-            width: auto;
+            object-fit: cover;
+
+            @include breakpoint(medium) {
+                margin-bottom: 1rem;
+            }
         }
     }
 
@@ -124,10 +144,10 @@
     }
 
     @include breakpoint(medium) {
-        flex: 1;
         flex-direction: row;
         justify-content: space-between;
         max-width: pxToRem(580);
+        min-width: pxToRem(400);
         padding: pxToRem(24);
 
         &__content {
@@ -156,16 +176,3 @@
         margin: 0;
     }
 }
-
-//Breakpoint
-
-//adding content-wrapper class
-// .content-wrapper {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: space-between;
-//     //max-width: pxToRem(1200);
-//     margin: 0 auto;
-//     gap: pxToRem(8);
-// }

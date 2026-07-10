@@ -120,82 +120,85 @@
             <div class="releases__container">
                 <!-- 1. Section Heading Header -->
                 <h2 class="releases__title">LATEST RELEASES</h2>
+                <div class="releases__content">
+                    <!-- Carausel part -->
+                    <div class="swiper" id="releases-slider">
+                        <!-- The moving tracking row -->
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/apache_kafka.webp"
+                                    alt="Apache Kafka Book Cover"
+                                    class="carousel__img"
+                                />
+                            </div>
 
-                <!-- Carausel part -->
-                <div class="swiper" id="releases-slider">
-                    <!-- The moving tracking row -->
-                    <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
-                        <div class="swiper-slide">
-                            <img
-                                src="public/assets/images/apache_kafka.webp"
-                                alt="Apache Kafka Book Cover"
-                                class="carousel__img"
-                            />
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/linderanca_em_design.webp"
+                                    alt="Liderança em Design Book Cover"
+                                    class="carousel__img"
+                                />
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/javascript_assertivo.webp"
+                                    alt="JavaScript Assertivo Book Cover"
+                                    class="carousel__img"
+                                />
+                            </div>
                         </div>
 
-                        <!-- Slide 2 -->
-                        <div class="swiper-slide">
-                            <img
-                                src="public/assets/images/linderanca_em_design.webp"
-                                alt="Liderança em Design Book Cover"
-                                class="carousel__img"
-                            />
-                        </div>
-
-                        <!-- Slide 3 -->
-                        <div class="swiper-slide">
-                            <img
-                                src="public/assets/images/javascript_assertivo.webp"
-                                alt="JavaScript Assertivo Book Cover"
-                                class="carousel__img"
-                            />
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
 
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
+                    <!-- 3. Recommendation Feature Card Component Block -->
+                    <article class="recommend-card">
+                        <!-- Left Layout Side: Text Content and Action Triggers -->
+                        <div class="recommend-card__content">
+                            <h3 class="recommend-card__tagline">
+                                You might also be interested in...
+                            </h3>
+                            <h4 class="recommend-card__title">
+                                Angular 11 and Firebase
+                            </h4>
+                            <p class="recommend-card__description">
+                                Building an application integrated with the
+                                Google platform.
+                            </p>
+
+                            <!-- Utility IcoMoon Icon Callouts -->
+                            <div class="recommend-card__actions">
+                                <div class="recommend-card__icon-btn">
+                                    <i class="icon-logo_heart"></i>
+                                </div>
+                                <div class="recommend-card__icon-btn">
+                                    <i class="icon-logo_bag"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Layout Side: Graphic Cover Art and Access Link -->
+                        <div class="recommend-card__media">
+                            <div class="recommend-card__graphic-box">
+                                <img
+                                    src="public/assets/images/angular.webp"
+                                    alt="Angular Logo Branding Graphic"
+                                    class="recommend-card__img"
+                                />
+                            </div>
+                            <a href="#" class="recommend-card__btn"
+                                >Learn more</a
+                            >
+                        </div>
+                    </article>
                 </div>
-
-                <!-- 3. Recommendation Feature Card Component Block -->
-                <article class="recommend-card">
-                    <!-- Left Layout Side: Text Content and Action Triggers -->
-                    <div class="recommend-card__content">
-                        <h3 class="recommend-card__tagline">
-                            You might also be interested in...
-                        </h3>
-                        <h4 class="recommend-card__title">
-                            Angular 11 and Firebase
-                        </h4>
-                        <p class="recommend-card__description">
-                            Building an application integrated with the Google
-                            platform.
-                        </p>
-
-                        <!-- Utility IcoMoon Icon Callouts -->
-                        <div class="recommend-card__actions">
-                            <div class="recommend-card__icon-btn">
-                                <i class="icon-logo_heart"></i>
-                            </div>
-                            <div class="recommend-card__icon-btn">
-                                <i class="icon-logo_bag"></i>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Layout Side: Graphic Cover Art and Access Link -->
-                    <div class="recommend-card__media">
-                        <div class="recommend-card__graphic-box">
-                            <img
-                                src="public/assets/images/angular.webp"
-                                alt="Angular Logo Branding Graphic"
-                                class="recommend-card__img"
-                            />
-                        </div>
-                        <a href="#" class="recommend-card__btn">Learn more</a>
-                    </div>
-                </article>
             </div>
         </section>
 
