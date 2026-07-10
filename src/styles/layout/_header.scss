@@ -2,93 +2,238 @@
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 3.5rem;
+    height: pxToRem(80);
+    padding: pxToRem(16);
     background-color: $white;
-    border-bottom: 1px solid $border-color;
-    position: relative;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__leftcontainer {
+        display: flex;
+        align-items: center;
+        width: pxToRem(112);
+        height: pxToRem(48);
+        justify-content: space-between;
+    }
+
+    &__rightcontainer {
+        display: flex;
+        width: pxToRem(169);
+        height: pxToRem(44);
+        justify-content: space-between;
+        align-items: center;
+
+        @include breakpoint(large) {
+            width: pxToRem(240);
+        }
+    }
+
+    &__menu {
+        position: fixed;
+        top: pxToRem(80);
+        left: -(pxToRem(320));
+        width: pxToRem(300);
+        background-color: white;
+        box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+        list-style: none;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        transition: left 0.3s ease-in-out;
+        z-index: 100;
+
+        &:hover .navbar__category {
+            color: $secondary-color;
+        }
+
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    &__menu.--open {
+        left: 0;
+    }
+
+    &__category {
+        font-weight: $font-weight-bold;
+        font-size: pxToRem(24);
+        color: $primary-color;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__link {
+        color: $secondary-color;
+        text-decoration: none;
+        font-weight: $font-weight-regular;
+        font-size: pxToRem(24);
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+
+    &__rightcontainer a {
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__icon-text {
+        display: none;
+
+        @include breakpoint(large) {
+            display: inline-block;
+            margin-left: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: $font-weight-regular;
+            color: $black;
+        }
+    }
+
+    &__desktop-links {
+        display: none;
+
+        @include breakpoint(medium) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            max-width: pxToRem(437);
+            margin-left: 3vw;
+            padding-top: 0.2rem;
+
+            a {
+                font-size: clamp(0.9rem, 1.8vw, 1.3rem);
+                padding: pxToRem(10);
+
+                &:hover {
+                    background-image: $gradient;
+                    color: white;
+                }
+            }
+        }
+    }
 }
 
-.hamburger__container {
-    height: 3.5rem;
-    width: 3.5rem;
+.hamburger-container {
+    height: pxToRem(48);
+    width: pxToRem(48);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @include breakpoint(medium) {
+        display: none;
+    }
+
+    &.--active {
+        background-image: $gradient;
+    }
 }
 
-.navbar__leftcontainer {
+.logo-container {
+    height: pxToRem(40);
+    width: pxToRem(40);
     display: flex;
-    align-items: center;
-    gap: 1rem;
-}
+    align-items: end;
 
-.navbar__rightcontainer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 40%;
-    height: 3rem;
-    margin-right: 1rem;
+    @include breakpoint(medium) {
+        height: pxToRem(40);
+        width: pxToRem(264);
+        gap: 0.7rem;
+    }
 }
 
 .alurabooks {
     display: none;
-}
 
-.navbar__menu {
-    position: fixed;
-    top: 3.5rem;
-    left: -18rem;
-    width: 16rem;
-    background-color: white;
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
-    list-style: none;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    transition: left 0.3s ease-in-out;
-    z-index: 100;
-}
+    @include breakpoint(medium) {
+        font-family: $font-family-brand;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        height: pxToRem(30);
+        width: pxToRem(156);
+        font-size: clamp(1.3rem, 1.8vw, 2.5rem);
 
-.navbar__menu.is-open {
-    left: 0;
-}
-
-.navbar__category {
-    color: $primary-color;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.navbar__link {
-    color: $secondary-mid-color;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-
-    &:hover {
-        color: $primary-color;
+        &__main {
+            font-weight: $font-weight-bold;
+        }
+        &__sub {
+            font-weight: $font-weight-regular;
+        }
     }
 }
 
-.navbar__rightcontainer a {
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+.navbar .dropdown {
+    @include breakpoint(medium) {
+        position: relative;
+        &:hover > a {
+            background-color: $secondary-color;
+            color: $white;
+            padding: pxToRem(10);
+        }
+
+        &:hover .dropdown__menu {
+            display: flex;
+        }
+    }
 }
 
-.navbar__icon-text,
-.navbar__desktop-links {
-    display: none;
+.dropdown {
+    &__menu {
+        @include breakpoint(medium) {
+            display: none;
+            position: absolute;
+            top: 2.2rem;
+            width: pxToRem(181);
+            background-color: $white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            list-style: none;
+            flex-direction: column;
+            z-index: 1000;
+
+            li {
+                border-bottom: 1px solid $border-color;
+            }
+
+            a {
+                display: block;
+                padding: pxToRem(10);
+                font-size: pxToRem(16);
+                color: $secondary-mid-color;
+
+                &:hover {
+                    background-color: $secondary-color;
+                    color: $white;
+                }
+            }
+        }
+    }
 }
 
 .icon-logo_heart {
     font-size: 3rem;
+    color: $secondary-mid-color;
+
+    @include breakpoint(medium) {
+        display: none;
+    }
 }
 
 .icon-logo_bag {
@@ -99,128 +244,7 @@
     font-size: 1.8rem;
 }
 
-// Tablet Breakpoint
-@media (min-width: $breakpoint-mobile) {
-    .navbar__rightcontainer {
-        width: auto;
-        gap: 1.5rem;
-    }
-    .navbar__leftcontainer {
-        padding-left: 1rem;
-    }
-
-    .hamburger__container {
-        display: none;
-    }
-
-    .navbar__rightcontainer .icon-logo_heart {
-        display: none;
-    }
-
-    .alurabooks {
-        font-family: $font-family-brand;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        margin-left: 0.5rem;
-    }
-
-    .alurabooks__main {
-        font-weight: $font-weight-bold;
-    }
-    .alurabooks__sub {
-        font-weight: $font-weight-regular;
-    }
-
-    .logo__container {
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .navbar__desktop-links {
-        display: flex;
-        align-items: center;
-        list-style: none;
-        gap: 1rem;
-        margin-left: 2rem;
-
-        a {
-            text-decoration: none;
-            color: $secondary-mid-color;
-            font-weight: $font-weight-regular;
-            font-size: 0.7rem;
-
-            &:hover {
-                color: $primary-color;
-            }
-        }
-    }
-
-    .dropdown {
-        position: relative;
-        &:hover > a {
-            background-color: $secondary-color;
-            color: $white;
-            padding: 1.3rem 1rem;
-        }
-
-        &:hover .dropdown__menu {
-            display: flex;
-        }
-    }
-
-    .dropdown__menu {
-        display: none;
-        position: absolute;
-        top: 2.2rem;
-        width: 14rem;
-        background-color: $white;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        list-style: none;
-        flex-direction: column;
-        z-index: 1000;
-
-        li {
-            border-bottom: 1px solid $border-color;
-
-            &:first-child a {
-                background-color: $secondary-color;
-                color: $white;
-                font-weight: $font-weight-bold;
-            }
-        }
-
-        a {
-            display: block;
-            padding: 1rem;
-            font-size: 0.85rem;
-            color: $secondary-mid-color;
-
-            &:hover {
-                background-color: $white;
-                color: $primary-color;
-            }
-        }
-    }
-}
-
-//Laptop Breakpoint
-@media (min-width: $breakpoint-tablet) {
-    .navbar {
-        &__icon-text {
-            display: inline-block;
-            margin-left: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: $font-weight-regular;
-            color: $secondary-mid-color;
-        }
-        &__leftcontainer {
-            padding-left: 2rem;
-            gap: 2.5rem;
-        }
-        &__rightcontainer {
-            width: 40%;
-        }
-    }
+.left-wrapper {
+    display: flex;
+    gap: 5rem;
 }

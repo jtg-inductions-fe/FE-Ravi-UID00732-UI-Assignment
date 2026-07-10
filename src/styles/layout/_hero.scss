@@ -6,6 +6,8 @@
     text-align: center;
     height: 15rem;
 
+    background-image: $gradient;
+
     &__container {
         display: flex;
         flex-direction: column;
@@ -30,28 +32,27 @@
         font-weight: $font-weight-regular;
         opacity: 0.9;
     }
-}
 
-@media (min-width: $breakpoint-mobile) {
-    .hero {
-        height: 20rem;
-        padding: 5rem 2rem;
+    @include breakpoint(medium) {
+        .hero {
+            padding: 5rem 2rem;
 
-        &__title {
-            font-size: 2.2rem;
-        }
+            &__title {
+                font-size: 2.2rem;
+            }
 
-        &__subtitle {
-            font-size: 1.2rem;
-            width: 25rem;
+            &__subtitle {
+                font-size: 1.2rem;
+                width: 25rem;
+            }
         }
     }
-}
 
-@media (min-width: $breakpoint-tablet) {
-    .hero {
-        &__subtitle {
-            width: 36rem;
+    @include breakpoint(large) {
+        .hero {
+            &__subtitle {
+                width: 36rem;
+            }
         }
     }
 }
