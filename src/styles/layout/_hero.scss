@@ -4,6 +4,7 @@
     background-color: $secondary-color;
     padding: 3.5rem 1rem;
     text-align: center;
+    height: 15rem;
 
     &__container {
         display: flex;
@@ -33,6 +34,7 @@
 
 @media (min-width: $breakpoint-mobile) {
     .hero {
+        height: 20rem;
         padding: 5rem 2rem;
 
         &__title {

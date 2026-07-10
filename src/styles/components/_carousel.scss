@@ -1,0 +1,15 @@
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+.carousel__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+// Custom style override for the pagination bullet colors if you want to match your theme
+.swiper-pagination-bullet-active {
+    background: #002b49; /* Your dark blue theme color */
+}
