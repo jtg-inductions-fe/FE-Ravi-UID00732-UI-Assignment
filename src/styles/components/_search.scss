@@ -8,7 +8,7 @@
     max-width: 32rem;
     height: 3rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
-    border-radius: 1.5rem;
+    border-radius: 30px;
     background: transparent;
 
     &__content-wrapper {
@@ -17,14 +17,6 @@
         justify-content: center;
         gap: 0.6rem;
         width: 100%;
-    }
-
-    &__icon {
-        display: flex;
-        align-items: center;
-        color: white;
-        font-size: 0.9rem;
-        flex-shrink: 0;
     }
 
     &__input {
