@@ -22,7 +22,7 @@ hamburger.addEventListener('click', () => {
 new Swiper('#releases-slider', {
     modules: [Pagination],
 
-    loop: false,
+    initialSlide: 1,
     centeredSlides: true,
     slidesPerView: 2,
     spaceBetween: 16,
