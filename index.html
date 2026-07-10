@@ -1,84 +1,98 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Alura Books</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
+        <link rel="icon" type="image/png" href="assets/images/logo.png" />
     </head>
     <body>
         <nav class="navbar">
-            <!-- left side container having hamburger icon, alurabooks logo and desktop navigation links. -->
-            <div class="navbar__leftcontainer">
-                <div class="hamburger__container">
-                    <img
-                        src="public/assets/images/hamburger.svg"
-                        alt="hamburger-icon"
-                    />
-                </div>
+            <div class="navbar__container">
+                <div class="left-wrapper">
+                    <div class="navbar__leftcontainer">
+                        <!-- hamburger container -->
+                        <div class="hamburger-container" id="hamburger">
+                            <img
+                                src="public/assets/images/hamburger_blue.svg"
+                                alt="hamburger-icon"
+                                id="hamburger-icon"
+                            />
+                        </div>
 
-                <div class="logo__container">
-                    <img
-                        src="public/assets/images/Logo.png"
-                        alt="main-brand-logo"
-                    />
-                    <div class="alurabooks">
-                        <span class="alurabooks__main">Alura</span>
-                        <span class="alurabooks__sub">Books</span>
+                        <div class="logo-container">
+                            <img
+                                src="public/assets/images/logo.png"
+                                alt="alurabook-logo"
+                            />
+                            <div class="alurabooks">
+                                <span class="alurabooks__main">Alura</span>
+                                <span class="alurabooks__sub">Books</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar__desktop-links">
+                        <div class="dropdown">
+                            <a href="#">CATEGORIES</a>
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="#">PROGRAMMING</a>
+                                </li>
+                                <li>
+                                    <a href="#">FRONT-END</a>
+                                </li>
+                                <li>
+                                    <a href="#">INFRASTRUCTURE</a>
+                                </li>
+                                <li>
+                                    <a href="#">BUSINESS</a>
+                                </li>
+                                <li>
+                                    <a href="#">DESIGN & UX</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div><a href="#">FAVORITES</a></div>
+                        <div><a href="#">BOOKSHELF</a></div>
                     </div>
                 </div>
 
-                <!-- Desktop Navigation Links Hidden on mobile -->
-                <ul class="navbar__desktop-links">
-                    <li class="dropdown">
-                        <a href="#">CATEGORIES</a>
+                <!-- navbar right-container containing the heart, bag and vector icon. -->
+                <div class="navbar__rightcontainer">
+                    <!-- Heart icon -->
+                    <div class="navbar__heart">
+                        <a href="#"><i class="icon-logo_heart"></i></a>
+                    </div>
 
-                        <ul class="dropdown__menu">
-                            <li><a href="#">PROGRAMMING</a></li>
-                            <li><a href="#">FRONT-END</a></li>
-                            <li><a href="#">INFRASTRUCTURE</a></li>
-                            <li><a href="#">BUSINESS</a></li>
-                            <li><a href="#">DESIGN & UX</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">FAVORITES</a></li>
-                    <li><a href="#">MY BOOKSHELF</a></li>
+                    <!-- bag icon -->
+                    <div class="navbar__bag">
+                        <a href="#">
+                            <i class="icon-logo_bag"></i>
+                            <span class="navbar__icon-text">My Bag</span>
+                        </a>
+                    </div>
+
+                    <!-- vector icon -->
+                    <div class="navbar__vector">
+                        <a href="#">
+                            <i class="icon-logo_vector"></i>
+                            <span class="navbar__icon-text">My Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- List of option opens when hamburger icon is clicked on mobile view. -->
+                <ul class="navbar__menu" id="nav-menu">
+                    <li class="navbar__category">Categories</li>
+                    <li><a href="#" class="navbar__link">PROGRAMMING</a></li>
+                    <li><a href="#" class="navbar__link">FRONT-END</a></li>
+                    <li><a href="#" class="navbar__link">INFRASTRUCTURE</a></li>
+                    <li><a href="#" class="navbar__link">BUSINESS</a></li>
+                    <li><a href="#" class="navbar__link">DESIGN & UX</a></li>
                 </ul>
             </div>
-
-            <!-- navbar right-container containing the heart, bag and vector icon. -->
-            <div class="navbar__rightcontainer">
-                <!-- Heart icon -->
-                <div class="navbar__heart">
-                    <a href="#"><i class="icon-logo_heart"></i></a>
-                </div>
-
-                <!-- bag icon -->
-                <div class="navbar__bag">
-                    <a href="#">
-                        <i class="icon-logo_bag"></i>
-                        <span class="navbar__icon-text">My Bag</span>
-                    </a>
-                </div>
-
-                <!-- vector icon -->
-                <div class="navbar__vector">
-                    <a href="#">
-                        <i class="icon-logo_vector"></i>
-                        <span class="navbar__icon-text">My Profile</span>
-                    </a>
-                </div>
-            </div>
-
-            <!-- List of option opens when hamburger icon is clicked on mobile view. -->
-            <ul class="navbar__menu">
-                <li class="navbar__category">Categories</li>
-                <li><a href="#" class="navbar__link">PROGRAMMING</a></li>
-                <li><a href="#" class="navbar__link">FRONT-END</a></li>
-                <li><a href="#" class="navbar__link">INFRASTRUCTURE</a></li>
-                <li><a href="#" class="navbar__link">BUSINESS</a></li>
-                <li><a href="#" class="navbar__link">DESIGN & UX</a></li>
-            </ul>
         </nav>
 
         <!--Hero Section Container -->
@@ -88,17 +102,6 @@
                 <p class="hero__subtitle">
                     Find what you need for your development on our bookshelf!
                 </p>
-
-                <!-- <form class="search">
-                    <span class="search__icon">
-                        <i class="icon-logo_search"></i>
-                    </span>
-                    <input
-                        type="search"
-                        class="search__input"
-                        placeholder="What will your next read be?"
-                    />
-                </form> -->
 
                 <form class="search">
                     <div class="search__content-wrapper">
