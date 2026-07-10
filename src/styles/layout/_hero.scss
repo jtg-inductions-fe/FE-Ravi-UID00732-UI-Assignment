@@ -33,25 +33,21 @@
     }
 
     @include breakpoint(medium) {
-        .hero {
-            padding: 5rem 2rem;
+        padding: 5rem 2rem;
 
-            &__title {
-                font-size: 2.2rem;
-            }
+        &__title {
+            font-size: 2.2rem;
+        }
 
-            &__subtitle {
-                font-size: 1.2rem;
-                width: 25rem;
-            }
+        &__subtitle {
+            font-size: 1.2rem;
+            width: 25rem;
         }
     }
 
     @include breakpoint(large) {
-        .hero {
-            &__subtitle {
-                width: 36rem;
-            }
+        &__subtitle {
+            width: 36rem;
         }
     }
 }
