@@ -1,7 +1,6 @@
 @use '../abstracts/index' as *;
 
 .hero {
-    background-color: $secondary-color;
     padding: 3.5rem 1rem;
     text-align: center;
 
@@ -18,14 +17,14 @@
     }
 
     &__title {
-        color: $white;
+        //color: $white;
         font-size: 1.2rem;
         font-weight: $font-weight-bold;
         letter-spacing: 0.02em;
     }
 
     &__subtitle {
-        color: $white;
+        //color: $white;
         font-size: 1rem;
         width: 18rem;
         font-weight: $font-weight-regular;
