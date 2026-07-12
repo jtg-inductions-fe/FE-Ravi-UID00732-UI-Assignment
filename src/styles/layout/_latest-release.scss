@@ -1,8 +1,8 @@
 @use '../abstracts/index' as *;
 
 .releases {
-    background-color: #e5e5e5;
-    padding-bottom: 2rem;
+    background-color: $border-color;
+    padding-bottom: pxToRem(32);
     width: 100%;
 
     &__container {
@@ -20,7 +20,7 @@
         max-width: 100%;
         justify-content: center;
         align-items: center;
-        gap: 2rem;
+        gap: pxToRem(32);
 
         @include breakpoint(large) {
             flex-direction: row;
@@ -31,17 +31,14 @@
         color: $primary-color;
         font-size: pxToRem(18);
         font-weight: $font-weight-bold;
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
         text-align: center;
-        background-color: white;
+        background-color: $white;
         width: 100%;
         padding: pxToRem(16) 0;
-        margin: 0;
     }
 
     @include breakpoint(medium) {
-        padding-bottom: 2rem;
+        padding-bottom: pxToRem(32);
         &__container {
             flex-direction: column;
             align-items: center;
@@ -57,9 +54,9 @@
 }
 
 .recommend-card {
-    background-color: white;
-    border-radius: pxToRem(8);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: $white;
+    border-radius: $card-border-radius;
+    box-shadow: 0px pxToRem(4) pxToRem(4) rgba(0, 0, 0, 0.25);
     padding: pxToRem(24);
     width: 100%;
     max-width: pxToRem(380);
@@ -67,12 +64,12 @@
     gap: pxToRem(24);
 
     &__icon-btn .icon-logo_heart {
-        font-size: 3rem;
+        font-size: pxToRem(48);
         color: $secondary-mid-color;
     }
 
     &__tagline {
-        color: $primary-color; // Orange
+        color: $primary-color;
         font-size: pxToRem(16);
         font-weight: $font-weight-bold;
         margin-bottom: pxToRem(8);
@@ -87,12 +84,6 @@
         font-size: pxToRem(18);
         font-weight: $font-weight-bold;
         margin-bottom: pxToRem(8);
-    }
-
-    &__description {
-        color: rgba(0, 0, 0, 0.85);
-        font-size: pxToRem(16);
-        line-height: 1.5;
     }
 
     &__actions {
@@ -120,7 +111,7 @@
             object-fit: cover;
 
             @include breakpoint(medium) {
-                margin-bottom: 1rem;
+                margin-bottom: pxToRem(16);
             }
         }
     }
@@ -130,7 +121,7 @@
         align-items: center;
         justify-content: center;
         background-color: $primary-color;
-        color: white;
+        color: $white;
         text-decoration: none;
         font-weight: $font-weight-bold;
         font-size: pxToRem(16);
@@ -139,7 +130,7 @@
         transition: background-color 0.2s;
 
         &:hover {
-            background-color: darken(#f2994a, 10%);
+            background-color: darken($primary-color, 10%);
         }
     }
 
@@ -169,7 +160,7 @@
     }
 }
 
-#release-slider {
+#releases-slider {
     @include breakpoint(medium) {
         flex: 1.2;
         max-width: pxToRem(801);
