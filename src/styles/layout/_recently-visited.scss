@@ -1,0 +1,70 @@
+@use '../abstracts/index' as *;
+
+// --- variables ---
+$color-navy: #1b3a57;
+$color-orange: #f2a007;
+$color-orange-hover: #d88f00;
+$color-white: #ffffff;
+
+$gap-mobile: 10px;
+$gap-desktop: 16px;
+$radius: 6px;
+
+$bp-tablet: 600px;
+$bp-desktop: 900px;
+
+.recent-topics {
+    background-image: $gradient;
+    padding: pxToRem(32) pxToRem(16);
+
+    &__container {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        color: $white;
+        font-weight: $font-weight-light;
+        font-size: pxToRem(16);
+        margin-bottom: pxToRem(24);
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0 auto;
+        gap: pxToRem(10);
+    }
+
+    &__tag {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        color: $white;
+        font-weight: $font-weight-bold;
+        font-size: pxToRem(14);
+        padding: pxToRem(14) pxToRem(24);
+    }
+
+    @include breakpoint(medium) {
+        padding: pxToRem(40) pxToRem(24);
+
+        &__title {
+            font-size: pxToRem(24);
+            margin-bottom: pxToRem(28);
+        }
+
+        &__list {
+            max-width: pxToRem(743);
+            gap: pxToRem(14);
+        }
+
+        &__tag {
+            font-size: pxToRem(24);
+            padding: pxToRem(14) pxToRem(24);
+        }
+    }
+}
