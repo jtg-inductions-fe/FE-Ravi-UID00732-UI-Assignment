@@ -35,10 +35,14 @@ a {
 }
 
 .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: $primary-color;
     color: $white;
-    padding: 1rem 1.2rem;
-    border: none;
+    font-weight: $font-weight-bold;
+    font-size: pxToRem(14);
+    padding: pxToRem(14) pxToRem(24);
 }
 
 .primary-heading {
@@ -50,7 +54,7 @@ a {
 }
 
 .shadow-style {
-    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: pxToRem(4) 0 pxToRem(10) rgba(0, 0, 0, 0.4);
 }
 
 .description-style {
