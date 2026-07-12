@@ -1,7 +1,7 @@
 @use '../abstracts/index' as *;
 
 .hero {
-    padding: 3.5rem 1rem;
+    padding: pxToRem(56) pxToRem(16);
     text-align: center;
 
     background-image: $gradient;
@@ -11,42 +11,39 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        max-width: 1200px;
+        max-width: pxToRem(1200);
         margin: 0 auto;
-        gap: 1.5rem;
+        gap: pxToRem(24);
     }
 
     &__title {
-        //color: $white;
-        font-size: 1.2rem;
+        font-size: pxToRem(19);
         font-weight: $font-weight-bold;
-        letter-spacing: 0.02em;
     }
 
     &__subtitle {
-        //color: $white;
-        font-size: 1rem;
-        width: 18rem;
+        font-size: pxToRem(16);
+        width: pxToRem(288);
         font-weight: $font-weight-regular;
         opacity: 0.9;
     }
 
     @include breakpoint(medium) {
-        padding: 5rem 2rem;
+        padding: pxToRem(80) pxToRem(32);
 
         &__title {
-            font-size: 2.2rem;
+            font-size: pxToRem(35);
         }
 
         &__subtitle {
-            font-size: 1.2rem;
-            width: 25rem;
+            font-size: pxToRem(19);
+            width: pxToRem(400);
         }
     }
 
     @include breakpoint(large) {
         &__subtitle {
-            width: 36rem;
+            width: pxToRem(576);
         }
     }
 }
