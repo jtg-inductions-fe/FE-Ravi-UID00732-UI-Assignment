@@ -1,0 +1,35 @@
+@use '../abstracts/index' as *;
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: pxToRem(512);
+    height: pxToRem(48);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    background: transparent;
+
+    &__content-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: pxToRem(8);
+        width: 100%;
+    }
+
+    &__input {
+        field-sizing: content;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: pxToRem(15);
+
+        &::placeholder {
+            color: $white;
+            font-weight: $font-weight-regular;
+            opacity: 0.9;
+        }
+    }
+}

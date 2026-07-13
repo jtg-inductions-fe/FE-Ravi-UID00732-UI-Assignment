@@ -1,0 +1,49 @@
+@use '../abstracts/index' as *;
+
+.hero {
+    padding: pxToRem(56) pxToRem(16);
+    text-align: center;
+
+    background-image: $gradient;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: pxToRem(1200);
+        margin: 0 auto;
+        gap: pxToRem(24);
+    }
+
+    &__title {
+        font-size: pxToRem(19);
+        font-weight: $font-weight-bold;
+    }
+
+    &__subtitle {
+        font-size: pxToRem(16);
+        width: pxToRem(288);
+        font-weight: $font-weight-regular;
+        opacity: 0.9;
+    }
+
+    @include breakpoint(medium) {
+        padding: pxToRem(80) pxToRem(32);
+
+        &__title {
+            font-size: pxToRem(35);
+        }
+
+        &__subtitle {
+            font-size: pxToRem(19);
+            width: pxToRem(400);
+        }
+    }
+
+    @include breakpoint(large) {
+        &__subtitle {
+            width: pxToRem(576);
+        }
+    }
+}

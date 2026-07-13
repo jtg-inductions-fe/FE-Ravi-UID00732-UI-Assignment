@@ -29,3 +29,26 @@ a {
     font-weight: $font-weight-regular;
     color: $black;
 }
+
+.hero-text {
+    color: $white;
+}
+
+.primary-btn {
+    background-color: $primary-color;
+    color: $white;
+    padding: 1rem 1.2rem;
+    border: none;
+}
+
+.primary-heading {
+    color: $primary-color;
+    @include breakpoint(large) {
+        font-size: pxToRem(32);
+        font-weight: 700;
+    }
+}
+
+.shadow-style {
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+}
