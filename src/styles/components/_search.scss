@@ -5,8 +5,8 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 32rem;
-    height: 3rem;
+    max-width: pxToRem(512);
+    height: pxToRem(48);
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 30px;
     background: transparent;
@@ -15,7 +15,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 0.6rem;
+        gap: pxToRem(8);
         width: 100%;
     }
 
@@ -24,11 +24,10 @@
         border: none;
         outline: none;
         background: transparent;
-        font-size: 0.9rem;
-        //color: white;
+        font-size: pxToRem(15);
 
         &::placeholder {
-            color: white;
+            color: $white;
             font-weight: $font-weight-regular;
             opacity: 0.9;
         }
