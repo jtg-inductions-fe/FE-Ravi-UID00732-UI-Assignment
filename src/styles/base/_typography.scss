@@ -1,29 +1,5 @@
 @use '../abstracts/index' as *;
 
-h1 {
-    font-size: pxToRem(36);
-    line-height: 1.5;
-    letter-spacing: 0%;
-}
-
-h2 {
-    font-size: pxToRem(32);
-    line-height: 1.5;
-    letter-spacing: 0%;
-}
-
-h3 {
-    font-size: pxToRem(18);
-    line-height: 1.5;
-    letter-spacing: 0%;
-}
-
-p {
-    font-size: pxToRem(16);
-    line-height: 1.5;
-    letter-spacing: 0%;
-}
-
 a {
     text-decoration: none;
     font-weight: $font-weight-regular;
@@ -35,10 +11,14 @@ a {
 }
 
 .primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: $primary-color;
     color: $white;
-    padding: 1rem 1.2rem;
-    border: none;
+    font-weight: $font-weight-bold;
+    font-size: pxToRem(14);
+    padding: pxToRem(14) pxToRem(24);
 }
 
 .primary-heading {
