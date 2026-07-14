@@ -52,3 +52,8 @@ a {
 .shadow-style {
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
 }
+
+.description-style {
+    color: $black;
+    font-size: pxToRem(16);
+}
