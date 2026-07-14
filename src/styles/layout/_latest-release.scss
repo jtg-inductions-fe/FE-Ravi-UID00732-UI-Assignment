@@ -63,7 +63,7 @@
     display: flex;
     gap: pxToRem(24);
 
-    &__icon-btn .icon-logo_heart {
+    &__logo-first {
         font-size: pxToRem(48);
         color: $secondary-mid-color;
     }
