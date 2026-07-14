@@ -1,0 +1,96 @@
+@use '../abstracts/index' as *;
+
+.newsletter {
+    position: relative;
+    background: $white;
+    border-bottom: 1px solid $text-muted;
+    font-family: $font-family-base;
+    padding: pxToRem(32) pxToRem(24);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: pxToRem(20);
+        margin: 0 auto;
+    }
+
+    &__content {
+        max-width: pxToRem(480);
+    }
+
+    &__title {
+        margin: 0 0 pxToRem(8);
+        color: $secondary-color;
+        font-size: pxToRem(18);
+        font-weight: $font-weight-medium;
+    }
+
+    &__desc {
+        color: $secondary-mid-color;
+        font-size: pxToRem(16);
+        font-weight: $font-weight-light;
+    }
+
+    &__btn {
+        display: inline-flex;
+        gap: pxToRem(10);
+        padding: pxToRem(12) pxToRem(24);
+        border: 1.5px solid $secondary-color;
+        border-radius: 999px;
+        background: transparent;
+        color: $secondary-color;
+        font-size: pxToRem(16);
+        font-weight: $font-weight-regular;
+        cursor: pointer;
+        max-width: pxToRem(400);
+    }
+
+    &__input {
+        field-sizing: content;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: pxToRem(15);
+
+        &::placeholder {
+            color: $secondary-color;
+            font-weight: $font-weight-regular;
+            opacity: 0.9;
+        }
+    }
+
+    @include breakpoint(medium) {
+        padding: pxToRem(40);
+
+        &__container {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: pxToRem(24);
+        }
+
+        &__content {
+            max-width: pxToRem(300);
+        }
+
+        &__title {
+            font-size: pxToRem(24);
+        }
+
+        &__btn {
+            min-width: pxToRem(325);
+        }
+    }
+
+    @include breakpoint(large) {
+        padding: pxToRem(56) pxToRem(80);
+
+        &__container {
+            gap: pxToRem(35);
+        }
+
+        &__content {
+            max-width: pxToRem(330);
+        }
+    }
+}
