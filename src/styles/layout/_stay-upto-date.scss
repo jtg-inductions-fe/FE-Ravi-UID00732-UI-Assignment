@@ -3,7 +3,7 @@
 .newsletter {
     position: relative;
     background: $white;
-    border-bottom: pxToRem(4) solid $secondary-color;
+    border-bottom: 4px solid $secondary-color;
     font-family: $font-family-base;
     padding: pxToRem(32) pxToRem(24);
 
@@ -35,23 +35,32 @@
         display: inline-flex;
         gap: pxToRem(10);
         padding: pxToRem(12) pxToRem(24);
-        border: pxToRem(1.5) solid $secondary-color;
-        border-radius: pxToRem(999);
+        border: 1.5px solid $secondary-color;
+        border-radius: 999px;
         background: transparent;
         color: $secondary-color;
         font-size: pxToRem(16);
         font-weight: $font-weight-regular;
         cursor: pointer;
-        max-width: 400px;
+        max-width: pxToRem(400);
+    }
 
-        &:hover {
-            background-image: $gradient;
-            color: $white;
+    &__input {
+        field-sizing: content;
+        border: none;
+        outline: none;
+        background: transparent;
+        font-size: pxToRem(15);
+
+        &::placeholder {
+            color: $secondary-color;
+            font-weight: $font-weight-regular;
+            opacity: 0.9;
         }
     }
 
     @include breakpoint(medium) {
-        padding: pxToRem(40) pxToRem(40);
+        padding: pxToRem(40);
 
         &__container {
             flex-direction: row;
