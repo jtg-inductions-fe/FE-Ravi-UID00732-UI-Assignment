@@ -1,0 +1,169 @@
+@use '../abstracts/index' as *;
+
+.releases {
+    background-color: $border-color;
+    padding-bottom: pxToRem(32);
+    width: 100%;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: pxToRem(8);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: pxToRem(32);
+
+        @include breakpoint(large) {
+            flex-direction: row;
+        }
+    }
+
+    &__title {
+        color: $primary-color;
+        font-size: pxToRem(18);
+        font-weight: $font-weight-bold;
+        text-align: center;
+        background-color: $white;
+        width: 100%;
+        padding: pxToRem(16) 0;
+    }
+
+    @include breakpoint(medium) {
+        padding-bottom: pxToRem(32);
+        &__container {
+            flex-direction: column;
+            align-items: center;
+            gap: pxToRem(40);
+        }
+
+        &__title {
+            font-size: pxToRem(32);
+            padding-top: pxToRem(48);
+            margin-bottom: pxToRem(16);
+        }
+    }
+}
+
+.recommend-card {
+    background-color: $white;
+    border-radius: $card-border-radius;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: pxToRem(24);
+    width: 100%;
+    max-width: pxToRem(380);
+    display: flex;
+    gap: pxToRem(24);
+
+    &__logo-first {
+        font-size: pxToRem(48);
+        color: $secondary-mid-color;
+    }
+
+    &__tagline {
+        color: $primary-color;
+        font-size: pxToRem(16);
+        font-weight: $font-weight-bold;
+        margin-bottom: pxToRem(8);
+
+        @include breakpoint(large) {
+            font-size: pxToRem(32);
+        }
+    }
+
+    &__title {
+        color: $secondary-color;
+        font-size: pxToRem(18);
+        font-weight: $font-weight-bold;
+        margin-bottom: pxToRem(8);
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: pxToRem(10);
+    }
+
+    &__media {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__graphic-box {
+        width: 100%;
+        height: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            object-fit: cover;
+
+            @include breakpoint(medium) {
+                margin-bottom: pxToRem(16);
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        color: $white;
+        text-decoration: none;
+        font-weight: $font-weight-bold;
+        font-size: pxToRem(16);
+        width: 100%;
+        height: pxToRem(48);
+        transition: background-color 0.2s;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+
+    @include breakpoint(medium) {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: pxToRem(580);
+        min-width: pxToRem(400);
+        padding: pxToRem(24);
+
+        &__content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        &__media {
+            width: pxToRem(160);
+            flex-shrink: 0;
+            justify-content: space-between;
+
+            &__graphic-box {
+                height: pxToRem(140);
+            }
+        }
+    }
+}
+
+#releases-slider {
+    @include breakpoint(medium) {
+        flex: 1.2;
+        max-width: pxToRem(801);
+        margin: 0;
+    }
+}

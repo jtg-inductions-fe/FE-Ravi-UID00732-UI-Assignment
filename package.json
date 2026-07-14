@@ -1,5 +1,5 @@
 {
-    "name": "static-html-base-template",
+    "name": "Alura-Books",
     "description": "",
     "keywords": [],
     "version": "0.0.0",
@@ -39,5 +39,8 @@
             "eslint --max-warnings=0"
         ],
         "*.{html,scss,json}": "prettier --check"
+    },
+    "dependencies": {
+        "swiper": "^14.0.2"
     }
 }

@@ -1,13 +1,520 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Alura Books</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
+        <link rel="icon" type="image/png" href="assets/images/logo.png" />
     </head>
     <body>
-        <div>Hello World</div>
+        <nav class="navbar">
+            <div class="navbar__container">
+                <div class="left-wrapper">
+                    <div class="navbar__leftcontainer">
+                        <!-- hamburger container -->
+                        <div class="hamburger-container" id="hamburger">
+                            <img
+                                src="public/assets/images/hamburger_blue.svg"
+                                alt="hamburger-icon"
+                                id="hamburger-icon"
+                            />
+                        </div>
+
+                        <div class="logo-container">
+                            <img
+                                src="public/assets/images/logo.png"
+                                alt="alurabook-logo"
+                            />
+                            <div class="alurabooks">
+                                <span class="alurabooks__main">Alura</span>
+                                <span class="alurabooks__sub">Books</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="navbar__desktop-links">
+                        <div class="dropdown">
+                            <a href="#">CATEGORIES</a>
+                            <ul class="dropdown__menu">
+                                <li>
+                                    <a href="#">PROGRAMMING</a>
+                                </li>
+                                <li>
+                                    <a href="#">FRONT-END</a>
+                                </li>
+                                <li>
+                                    <a href="#">INFRASTRUCTURE</a>
+                                </li>
+                                <li>
+                                    <a href="#">BUSINESS</a>
+                                </li>
+                                <li>
+                                    <a href="#">DESIGN & UX</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div><a href="#">FAVORITES</a></div>
+                        <div><a href="#">BOOKSHELF</a></div>
+                    </div>
+                </div>
+
+                <!-- navbar right-container containing the heart, bag and vector icon. -->
+                <div class="navbar__rightcontainer">
+                    <!-- Heart icon -->
+                    <div class="navbar__heart">
+                        <a href="#"><i class="icon-logo_heart"></i></a>
+                    </div>
+
+                    <!-- bag icon -->
+                    <div class="navbar__bag">
+                        <a href="#">
+                            <i class="icon-logo_bag"></i>
+                            <span class="navbar__icon-text">My Bag</span>
+                        </a>
+                    </div>
+
+                    <!-- vector icon -->
+                    <div class="navbar__vector">
+                        <a href="#">
+                            <i class="icon-logo_vector"></i>
+                            <span class="navbar__icon-text">My Profile</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- List of option opens when hamburger icon is clicked on mobile view. -->
+                <ul class="navbar__menu" id="nav-menu">
+                    <li class="navbar__category">Categories</li>
+                    <li><a href="#" class="navbar__link">PROGRAMMING</a></li>
+                    <li><a href="#" class="navbar__link">FRONT-END</a></li>
+                    <li><a href="#" class="navbar__link">INFRASTRUCTURE</a></li>
+                    <li><a href="#" class="navbar__link">BUSINESS</a></li>
+                    <li><a href="#" class="navbar__link">DESIGN & UX</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Hero Section Container -->
+        <div class="hero hero-text">
+            <div class="hero__container">
+                <h1 class="hero__title">Do you already know where to start?</h1>
+                <p class="hero__subtitle">
+                    Find what you need for your development on our bookshelf!
+                </p>
+
+                <form class="search">
+                    <div class="search__content-wrapper">
+                        <i class="icon-logo_search"></i>
+                        <input
+                            type="search"
+                            class="search__input"
+                            placeholder="What will your next read be?"
+                            aria-label="Search books"
+                        />
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Latest Release Section -->
+        <section class="releases">
+            <div class="releases__container">
+                <!-- 1. Section Heading Header -->
+                <h2 class="releases__title primary-heading">LATEST RELEASES</h2>
+                <div class="releases__content">
+                    <!-- Carausel part -->
+                    <div class="swiper" id="releases-slider">
+                        <!-- The moving tracking row -->
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/apache_kafka.webp"
+                                    alt="Apache Kafka Book Cover"
+                                    class="carousel__img shadow-style"
+                                />
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/linderanca_em_design.webp"
+                                    alt="Liderança em Design Book Cover"
+                                    class="carousel__img shadow-style"
+                                />
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/javascript_assertivo.webp"
+                                    alt="JavaScript Assertivo Book Cover"
+                                    class="carousel__img shadow-style"
+                                />
+                            </div>
+
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/linderanca_em_design.webp"
+                                    alt="JavaScript Assertivo Book Cover"
+                                    class="carousel__img shadow-style"
+                                />
+                            </div>
+
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide">
+                                <img
+                                    src="public/assets/images/linderanca_em_design.webp"
+                                    alt="JavaScript Assertivo Book Cover"
+                                    class="carousel__img shadow-style"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+                    <!-- 3. Recommendation Feature Card Component Block -->
+                    <article class="recommend-card shadow-style">
+                        <!-- Left Layout Side: Text Content and Action Triggers -->
+                        <div class="recommend-card__content">
+                            <h3 class="recommend-card__tagline primary-heading">
+                                You might also be interested in...
+                            </h3>
+                            <h4 class="recommend-card__title">
+                                Angular 11 and Firebase
+                            </h4>
+                            <p
+                                class="recommend-card__description description-style"
+                            >
+                                Building an application integrated with the
+                                Google platform.
+                            </p>
+
+                            <!-- Utility IcoMoon Icon Callouts -->
+                            <div class="recommend-card__actions">
+                                <div class="recommend-card__icon-btn">
+                                    <i
+                                        class="icon-logo_heart recommend-card__logo-first"
+                                    ></i>
+                                </div>
+                                <div class="recommend-card__icon-btn">
+                                    <i class="icon-logo_bag"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Layout Side: Graphic Cover Art and Access Link -->
+                        <div class="recommend-card__media">
+                            <div class="recommend-card__graphic-box">
+                                <img
+                                    src="public/assets/images/angular.webp"
+                                    alt="Angular Logo Branding Graphic"
+                                    class="recommend-card__img"
+                                />
+                            </div>
+                            <a href="#" class="recommend-card__btn primary-btn"
+                                >Learn more</a
+                            >
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recently visited topics section  -->
+        <section class="recent-topics">
+            <div class="recent-topics__container">
+                <h2 class="recent-topics__title">RECENTLY VISITED TOPICS</h2>
+
+                <ul class="recent-topics__list">
+                    <li>
+                        <a href="#" class="primary-btn">Android</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">OO</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">Marketing Digital</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">Agile</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">Startups</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">HTML & CSS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">Java</a>
+                    </li>
+                    <li>
+                        <a href="#" class="primary-btn">Python</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Stay up to date section  -->
+        <section class="newsletter">
+            <div class="newsletter__container">
+                <div class="newsletter__content">
+                    <h2 class="newsletter__title">
+                        Stay up to date with the latest news!
+                    </h2>
+                    <p class="newsletter__desc">
+                        E-book updates, new books, promotions, and more.
+                    </p>
+                </div>
+
+                <div class="newsletter__btn">
+                    <i class="icon-logo_mail"></i>
+                    <input
+                        type="email"
+                        class="newsletter__input"
+                        placeholder="Sign up with your email"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <div class="footer__inner">
+                <button
+                    class="footer__brand footer__toggle"
+                    type="button"
+                    aria-expanded="false"
+                    aria-controls="footer-groups"
+                >
+                    <span class="footer__brand-name">Alura Group</span>
+                </button>
+
+                <div class="footer__groups" id="footer-groups">
+                    <div class="footer__group">
+                        <button
+                            class="footer__group-title footer__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="footer-panel-education"
+                        >
+                            Education
+                        </button>
+
+                        <ul class="footer__list" id="footer-panel-education">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Caelum</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-telegram"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Casa do Código</span
+                                    >
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__group">
+                        <button
+                            class="footer__group-title footer__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="footer-panel-online-education"
+                        >
+                            Online Education
+                        </button>
+
+                        <ul
+                            class="footer__list"
+                            id="footer-panel-online-education"
+                        >
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text">Alura</span>
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-renren"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Alura Para Empresas</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-telegram"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Alura LATAM</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Alura Start</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >MusicDot</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Alura Língua</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text">PM3</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__group">
+                        <button
+                            class="footer__group-title footer__toggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="footer-panel-community"
+                        >
+                            Community
+                        </button>
+
+                        <ul class="footer__list" id="footer-panel-community">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Hipsters ponto Tech</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Scuba Dev</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Layers ponto Tech</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Like a Boss</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Carreira sem Fronteira</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text"
+                                        >Hipsters ponto Jobs</span
+                                    >
+                                </a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">
+                                    <i
+                                        class="footer__logo icon-google-plus3"
+                                        aria-hidden="true"
+                                    ></i>
+                                    <span class="footer__link-text">GUJ</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>

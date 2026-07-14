@@ -1,0 +1,46 @@
+@use '../abstracts/index' as *;
+
+.recent-topics {
+    background-image: $gradient;
+    padding: pxToRem(32) pxToRem(16);
+
+    &__container {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    &__title {
+        color: $white;
+        font-weight: $font-weight-light;
+        font-size: pxToRem(16);
+        margin-bottom: pxToRem(24);
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        list-style: none;
+        margin: 0 auto;
+        gap: pxToRem(10);
+    }
+
+    @include breakpoint(medium) {
+        padding: pxToRem(40) pxToRem(24);
+
+        &__title {
+            font-size: pxToRem(24);
+            margin-bottom: pxToRem(28);
+        }
+
+        &__list {
+            max-width: pxToRem(743);
+            gap: pxToRem(14);
+
+            .primary-btn {
+                font-size: pxToRem(24);
+                padding: pxToRem(14) pxToRem(24);
+            }
+        }
+    }
+}
